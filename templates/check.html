@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Promptify AI</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
+    <title>Prompts data</title>
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
             background-color: #123D46; /* Light Gray Background */
@@ -82,12 +80,7 @@
         }
     </style>
 </head>
-
 <body>
-    <div class="banner">
-        <p class="banner-text">Subscribe to our newsletter for updates and new tools!</p>
-    </div>
-
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="#">Promptify AI</a>
@@ -98,13 +91,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="{{ url_for('indexx') }}">Home</a>
+                        <a class="nav-link" href="{{ url_for('index') }}">Home</a>
                     </li>
                     <!-- <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('chatgpt_prompts') }}">Prompts</a>
                     </li> -->
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('prompts') }}">Prompts</a>
+                        <a class="nav-link" href="{{ url_for('check') }}">Prompts</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contact</a>
@@ -113,27 +106,26 @@
             </div>
         </div>
     </nav>
-
-    <div class="jumbotron">
-        <div class="container text-center">
-            <h1 class="display-4">Unlock the Power of AI Prompts with Promptify AI</h1>
-            <p class="lead">Discover and explore the most effective AI prompts — intelligently organized for your creativity.</p>
-            <!-- <hr class="my-4"> -->
-            <!-- <p>Receive the latest AI tools directly to your inbox. It's fast, free, and transformative.</p> -->
-            <div class="input-group mb-3">
-                <input type="email" class="form-control" placeholder="Enter your email">
-                <div class="input-group-append">
-                    <button class="btn btn-primary mb-2 type="button">Subscribe</button>
+    <div class="container">
+        {% for row in data %}
+        <div class="row">
+            <div class="col-md-6 mb-3"> <!-- Adjust column width and margin as needed -->
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Row {{ loop.index }}</h5>
+                        <!-- Insert your data here -->
+                        {% for key, value in row.items() %}
+                        <p class="card-text"><strong>{{ key }}:</strong> {{ value }}</p>
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
         </div>
+        {% endfor %}
     </div>
-
+    <div class="banner">
+        <p class="banner-text">Subscribe to our newsletter for updates and new tools!</p>
+    </div>
     {% include 'footer.html' %}
-
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-
 </html>

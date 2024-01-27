@@ -10,14 +10,14 @@
     <!-- Custom CSS -->
     <style>
         body {
-            background-color: #123D46; /* Light Gray Background */
+            background-color: #000; /* Light Gray Background */
             color: #333; /* Dark Text Color */
             padding-top: 60px; /* Adjust padding for the navbar */
             margin-bottom: 60px; /* Adjust margin for the footer */
         }
 
         .navbar {
-            background-color: #123D46; /* Dark Gray Navbar Background */
+            background-color: #000; /* Dark Gray Navbar Background */
             position: fixed;
             top: 0;
             width: 100%;
@@ -29,7 +29,7 @@
         }
 
         .footer {
-            background-color: #123D46; /* Dark Gray Footer Background */
+            background-color: #000; /* Dark Gray Footer Background */
             color: #fff; /* Light Text Color */
             padding: 10px 0; /* Adjust footer padding */
             position: fixed;
@@ -39,7 +39,7 @@
         }
 
         .banner {
-            background-color: #123D46; /* Primary Blue Banner Background */
+            background-color: #000; /* Primary Blue Banner Background */
             color: #fff; /* Light Text Color */
             padding: 10px 0; /* Adjust banner padding */
             text-align: center; /* Center align text */
@@ -55,7 +55,7 @@
         }
 
         .jumbotron {
-            background-color: #123D46; /* Black Jumbotron Background */
+            background-color: #000; /* Black Jumbotron Background */
             color: #fff; /* White Text Color */
             padding: 80px 20px; /* Adjust jumbotron padding */
             margin-top: 100px; /* Adjust margin to create space from the banner */
@@ -76,10 +76,6 @@
             background-color: #0056b3; /* Darker Blue Button Background on hover */
             border-color: #0056b3; /* Darker Blue Button Border on hover */
         }
-         /* Adjust the placeholder font size */
-         ::placeholder {
-            font-size: 14px; /* Medium font size for placeholder */
-        }
     </style>
 </head>
 
@@ -90,7 +86,9 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">Promptify AI</a>
+            <a class="navbar-brand" href="#">
+                <img src="/templates/logo.png" alt="Logo">
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -98,13 +96,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="{{ url_for('indexx') }}">Home</a>
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                     </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('chatgpt_prompts') }}">Prompts</a>
-                    </li> -->
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('prompts') }}">Prompts</a>
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contact</a>
@@ -118,18 +116,22 @@
         <div class="container text-center">
             <h1 class="display-4">Unlock the Power of AI Prompts with Promptify AI</h1>
             <p class="lead">Discover and explore the most effective AI prompts — intelligently organized for your creativity.</p>
-            <!-- <hr class="my-4"> -->
-            <!-- <p>Receive the latest AI tools directly to your inbox. It's fast, free, and transformative.</p> -->
+            <hr class="my-4">
+            <p>Receive the latest AI tools directly to your inbox. It's fast, free, and transformative.</p>
             <div class="input-group mb-3">
                 <input type="email" class="form-control" placeholder="Enter your email">
                 <div class="input-group-append">
-                    <button class="btn btn-primary mb-2 type="button">Subscribe</button>
+                    <button class="btn btn-primary" type="button">Subscribe</button>
                 </div>
             </div>
         </div>
     </div>
 
-    {% include 'footer.html' %}
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Promptify AI</p>
+        </div>
+    </footer>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
