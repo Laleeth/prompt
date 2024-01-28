@@ -62,5 +62,5 @@ def midjourney_prompts():
     # Your Midjourney Prompts page logic
     return render_template('midjourney_prompts.html')
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# if __name__ == '__main__':
+#     app.run(debug=True)
