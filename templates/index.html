@@ -4,20 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Promptify AI</title>
+    <title>Promptify AI+</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <style>
         body {
-            background-color: #123D46; /* Light Gray Background */
+            background-color: #1D2B53; /* Light Gray Background */
             color: #333; /* Dark Text Color */
             padding-top: 60px; /* Adjust padding for the navbar */
             margin-bottom: 60px; /* Adjust margin for the footer */
         }
 
         .navbar {
-            background-color: #123D46; /* Dark Gray Navbar Background */
+            background-color: #1D2B53; /* Dark Gray Navbar Background */
             position: fixed;
             top: 0;
             width: 100%;
@@ -29,7 +29,7 @@
         }
 
         .footer {
-            background-color: #123D46; /* Dark Gray Footer Background */
+            background-color: #1D2B53; /* Dark Gray Footer Background */
             color: #fff; /* Light Text Color */
             padding: 10px 0; /* Adjust footer padding */
             position: fixed;
@@ -39,7 +39,7 @@
         }
 
         .banner {
-            background-color: #123D46; /* Primary Blue Banner Background */
+            background-color: #1D2B53; /* Primary Blue Banner Background */
             color: #fff; /* Light Text Color */
             padding: 10px 0; /* Adjust banner padding */
             text-align: center; /* Center align text */
@@ -55,7 +55,7 @@
         }
 
         .jumbotron {
-            background-color: #123D46; /* Black Jumbotron Background */
+            background-color: #1D2B53; /* Black Jumbotron Background */
             color: #fff; /* White Text Color */
             padding: 80px 20px; /* Adjust jumbotron padding */
             margin-top: 100px; /* Adjust margin to create space from the banner */
@@ -90,7 +90,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">Promptify AI</a>
+            <a class="navbar-brand" href="#">Promptify AI+</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -98,7 +98,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="{{ url_for('indexx') }}">Home</a>
+                        <a class="nav-link" href="{{ url_for('index') }}">Home</a>
                     </li>
                     <!-- <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('chatgpt_prompts') }}">Prompts</a>
@@ -107,7 +107,7 @@
                         <a class="nav-link" href="{{ url_for('prompts') }}">AI Tools</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -116,16 +116,67 @@
 
     <div class="jumbotron">
         <div class="container text-center">
-            <h1 class="display-4">Unlock the Power of AI Prompts with Promptify AI</h1>
+            <h1 class="display-4">Unlock the Power of A.I <u>Prompts & Tools</u> Promptify AI plus <u>(it`s free)</u></h1>
             <p class="lead">Discover and explore the most effective AI prompts — intelligently organized for your creativity.</p>
             <!-- <hr class="my-4"> -->
-            <!-- <p>Receive the latest AI tools directly to your inbox. It's fast, free, and transformative.</p> -->
-            <div class="input-group mb-3">
+            
+            <br>
+
+            <!-- <h9>Get the latest AI tools sent directly to your email.</h9> -->
+            
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div id="mc_embed_signup">
+                            <form action="https://onrender.us9.list-manage.com/subscribe/post?u=5baa30a35945240f400cf5362&amp;id=a729035cfc&amp;f_id=009623e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                                <div id="mc_embed_signup_scroll">
+                                    <!-- <h2>Subscribe</h2> -->
+                                    <div class="input-group mb-3">
+                                        <input type="email" name="EMAIL" class="required email form-control" id="mce-EMAIL" required="" placeholder="Enter your email">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                                        </div>
+                                    </div>
+                                    <div id="mce-responses" class="clear foot">
+                                        <div class="response" id="mce-error-response" style="display: none;"></div>
+                                        <div class="response" id="mce-success-response" style="display: none;"></div>
+                                    </div>
+                                    <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups -->
+                                        <input type="text" name="b_5baa30a35945240f400cf5362_a729035cfc" tabindex="-1" value="">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+                        <script type="text/javascript">
+                            (function($) {
+                                window.fnames = new Array();
+                                window.ftypes = new Array();
+                                fnames[0]='EMAIL';
+                                ftypes[0]='email';
+                                fnames[1]='FNAME';
+                                ftypes[1]='text';
+                                fnames[2]='LNAME';
+                                ftypes[2]='text';
+                                fnames[3]='ADDRESS';
+                                ftypes[3]='address';
+                                fnames[4]='PHONE';
+                                ftypes[4]='phone';
+                                fnames[5]='BIRTHDAY';
+                                ftypes[5]='birthday';
+                            }(jQuery));
+                            var $mcj = jQuery.noConflict(true);
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="input-group mb-3">
                 <input type="email" class="form-control" placeholder="Enter your email">
                 <div class="input-group-append">
                     <button class="btn btn-primary mb-2 type="button">Subscribe</button>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 

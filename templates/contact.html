@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #000; /* Light Gray Background */
+            color: #f4f3f3; /* Dark Text Color */
+            padding-top: 60px; /* Adjust padding for the navbar */
+            margin-bottom: 60px; /* Adjust margin for the footer */
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .column {
+            width: 45%; /* Adjust as needed */
+            margin-bottom: 20px;
+        }
+        
+
+        .navbar {
+            background-color: #080202; /* Dark Gray Navbar Background */
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar-brand img {
+            max-height: 40px; /* Adjust the height of the logo */
+        }
+
+        .footer {
+            background-color: #000; /* Dark Gray Footer Background */
+            color: #fff; /* Light Text Color */
+            padding: 10px 0; /* Adjust footer padding */
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center !important; /* Center align footer text */
+        }
+
+        .banner {
+            background-color: #000; /* Primary Blue Banner Background */
+            color: #fff; /* Light Text Color */
+            padding: 10px 0; /* Adjust banner padding */
+            text-align: center; /* Center align text */
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 999;
+        }
+
+        .banner-text {
+            font-size: 16px;
+            margin-bottom: 0;
+        }
+
+        .jumbotron {
+            background-color: #000; /* Black Jumbotron Background */
+            color: #fff; /* White Text Color */
+            padding: 80px 20px; /* Adjust jumbotron padding */
+            margin-top: 100px; /* Adjust margin to create space from the banner */
+        }
+
+        .jumbotron h5,
+        .jumbotron p {
+            color: #fff; /* White Text Color */
+            font-weight: bold; /* Bolder Text */
+        }
+
+        .jumbotron .btn {
+            background-color: #007bff; /* Primary Blue Button Background */
+            border-color: #007bff; /* Primary Blue Button Border */
+        }
+
+        .jumbotron .btn:hover {
+            background-color: #0056b3; /* Darker Blue Button Background on hover */
+            border-color: #0056b3; /* Darker Blue Button Border on hover */
+        }
+         /* Adjust the placeholder font size */
+         ::placeholder {
+            font-size: 14px; /* Medium font size for placeholder */
+        }
+        .card {
+        margin-bottom: 9px; /* Add 5px gap between each row */
+        background-color: #000; /* Black card background */
+        color: #fff; /* White text color */
+    }
+    .card-body {
+        font-size: 13px; /* Set the text size to 9px */
+    }
+    .contact-container {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .contact-container h2 {
+      font-size: 32px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ced4da;
+      border-radius: 4px;
+    }
+    .contact-form button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background-color: #007bff;
+      color: #fff;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .contact-form button:hover {
+      background-color: #0056b3;
+    }
+    </style>
+</head>
+
+<body>
+   
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Promptify AI+</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('chatgpt_prompts') }}">Prompts</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('prompts') }}">AI Tools</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="contact-container">
+          <h2>Get in Touch</h2>
+          <form class="contact-form">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Your Name">
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="Your Email">
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message <i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+    
+
+    <div class="banner">
+        <p class="banner-text">Subscribe to our newsletter for updates and new tools!</p>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+        integrity="sha384-z4gt9/X+P+6IuZyZCn3Mz9qYsgzzl9Pd1qU8f+nhMNNW+5wW+etb3ji4gn6x50w3"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-b4gt1jrGC7Jh4AgTPSdUtOBvfO8shCpV8jkUSa+06z2Rs//S9TCs6jzOmPs/7xSx"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

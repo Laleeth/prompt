@@ -18,7 +18,7 @@ def index():
 @app.route('/home')
 def home_page():
     # Your home page logic
-    return render_template('home.html')
+    return render_template('index.html')
 
 import pandas as pd
 
@@ -59,10 +59,10 @@ def ai_business_ideas():
     # Your AI Business Ideas page logic
     return render_template('ai_business_ideas.html')
 
-@app.route('/indexx')
-def indexx():
+@app.route('/contact')
+def contact():
     # Your AI Business Ideas page logic
-    return render_template('indexx.html')
+    return render_template('contact.html')
 
 # @app.route('/check')
 # def check():
